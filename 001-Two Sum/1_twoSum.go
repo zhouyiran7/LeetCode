@@ -41,7 +41,7 @@ func twoSum2(nums []int, target int) []int {
 	return nil
 }
 
-func main1() {
+func main() {
 	fmt.Println(twoSum([]int{2, 2, 7, 1}, 4))
 	fmt.Println(twoSum2([]int{2, 2, 7, 1}, 4))
 }
