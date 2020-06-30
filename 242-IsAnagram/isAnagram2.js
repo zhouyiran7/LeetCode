@@ -18,19 +18,8 @@ var isAnagram = function (s, t) {
   let hashMap = {}
 
   for (let i = 0; i < s.length; i++) {
-    if (hashMap[s.charAt(i)]) {
-      hashMap[s.charAt(i)]++
-    } else {
-      hashMap[s.charAt(i)] = 1
-    }
-  }
-
-  for (let i = 0; i < t.length; i++) {
-    if (hashMap[t.charAt(i)]) {
-      hashMap[t.charAt(i)]--
-    } else {
-      hashMap[t.charAt(i)] = 1
-    }
+    hashMap[s.charAt(i)] ? hashMap[s.charAt(i)]++ : hashMap[s.charAt(i)] = 1
+    hashMap[t.charAt(i)] ? hashMap[t.charAt(i)]-- : hashMap[t.charAt(i)] = -1
   }
 
   for (const key in hashMap) {
